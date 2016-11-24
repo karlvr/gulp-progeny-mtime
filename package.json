@@ -1,7 +1,7 @@
 {
 	"name": "gulp-progeny-mtime",
 	"description": "A gulp plugin to update the mtime of a file in a stream to the latest mtime of its progeny.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": {
 		"name": "Karl von Randow"
 	},
