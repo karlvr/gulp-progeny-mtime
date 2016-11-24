@@ -8,8 +8,6 @@ var PLUGIN_NAME = 'gulp-progeny-mtime';
 
 module.exports = function(options) {
 
-  var p = progeny(options);
-
   return Through.obj(function (file, enc, callback) {
 
     if (file.isStream()) {
@@ -19,7 +17,7 @@ module.exports = function(options) {
 
     if (file.isBuffer()) {
       var self = this;
-      p(file.path, file.contents, function(err, deps) {
+      progeny(options)(file.path, file.contents, function(err, deps) {
         var n = deps.length;
 
         if (n == 0) {
