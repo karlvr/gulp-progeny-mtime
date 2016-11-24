@@ -19,7 +19,7 @@ module.exports = function(options) {
 
     if (file.isBuffer()) {
       var self = this;
-      p(file.path, function(err, deps) {
+      p(file.path, file.contents, function(err, deps) {
         var n = deps.length;
 
         if (n == 0) {
